@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+.font-fredoka {
+  font-family: 'Fredoka', 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-dyslexic {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+/* Custom page flip & book styling */
+.book-container {
+  perspective: 1500px;
+}
+
+.storybook-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.storybook-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Word highlight glow during speech synthesis */
+.word-highlight {
+  background-color: #fef08a;
+  color: #854d0e;
+  border-radius: 0.25rem;
+  padding: 0 0.15rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.6);
+}
+
+/* Dark mode word highlight */
+.dark .word-highlight {
+  background-color: #854d0e;
+  color: #fef08a;
+  box-shadow: 0 0 10px rgba(234, 179, 8, 0.4);
+}
+
+/* Custom scrollbars for story text */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 114, 128, 0.6);
+}

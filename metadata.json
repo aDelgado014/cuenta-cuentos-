@@ -1,0 +1,6 @@
+{
+  "name": "Cuentilandia Voz & Magia - Cuentos Infantiles Narrados",
+  "description": "Reproduce y escucha cuentos infantiles con voces masculinas y femeninas, música de fondo relajante, resaltado de texto y generador de cuentos con IA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
